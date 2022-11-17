@@ -4,6 +4,8 @@ public class BankAccount {
     String customerEmail;
     int customerPhone;
     double balance;
+    public BankAccount (){
+    }
 
     public BankAccount(int accNo, String name, String email, int phone, double initialAmt){
         accountNumber = accNo;
@@ -21,7 +23,7 @@ public class BankAccount {
         return accountNumber;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -79,6 +81,6 @@ public class BankAccount {
     public void DisplayDetails(){
         System.out.println("Account Number\t Customer Name\t Customer Email\t Customer Phone\t Balance");
         System.out.println("--------------------------------------------------------------------------");
-        System.out.println(accountNumber + "\t\t" + customerName + "\t\t" + customerEmail + "\t\t" + customerPhone + "\t\t" + balance);
+        System.out.println(this.getAccountNumber() + "\t\t" + this.getCustomerName() + "\t\t" + this.getCustomerEmail() + "\t\t" + this.getCustomerPhone() + "\t\t" + this.getBalance());
     }
 }

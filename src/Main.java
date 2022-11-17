@@ -27,7 +27,12 @@ public class Main {
         System.out.println("Enter Customer Initial Deposit : ");
         balance = in.nextDouble();
 
-        ba = new BankAccount(accountNumber, customerName, customerEmail, customerPhone, balance);
+        ba = new BankAccount();
+        ba.setAccountNumber(accountNumber);
+        ba.setCustomerName(customerName);
+        ba.setCustomerEmail(customerEmail);
+        ba.setCustomerPhone(customerPhone);
+        ba.setBalance(balance);
 
         do {
             System.out.println("\n");
